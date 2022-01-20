@@ -16,3 +16,4 @@ PostgreSQL 14
 6. Ensure the port 8080 is available. If the port is to be updated, add the following property to the application.properties before running the application:
 server.port=<<AVAILABLE_PORT_NO>>
 7. Run the application as Spring Boot application.
+8. To "Export CSV" of the list of products in the inventory: Go the following endpoint in a browser: localhost:8080/export.html.

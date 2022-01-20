@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "6f4d7f7a-9a7d-429f-8547-e13259455af3",
+		"name": "Shopify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add a product to inventory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"1\",\n    \"name\":\"Product 1\",\n    \"description\": \"description\",\n    \"count\":\"5\",\n    \"warehouse_code\":\"ABC\",\n    \"priceData\" : {\n        \"itemPrice\": \"100.00\",\n        \"itemTax\":\"20.00\",\n        \"grossPrice\":\"120.00\",\n        \"currency\":{\n            \"code\":\"USD\",\n            \"symbol\": \"$\",\n            \"curName\": \"United States Dollar\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/inventory/product/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"inventory",
+						"product",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Inventory Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"2\",\n    \"name\":\"Product 2\",\n    \"description\": \"description\",\n    \"count\":\"45\",\n    \"warehouse_code\":\"ABC\",\n    \"priceData\" : {\n        \"itemPrice\": \"80.00\",\n        \"itemTax\":\"10.00\",\n        \"grossPrice\":\"90.00\",\n        \"currency\":{\n            \"code\":\"USD\",\n            \"symbol\": \"$\",\n            \"curName\": \"United States Dollar\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/inventory/product/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"inventory",
+						"product",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/inventory/product/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"inventory",
+						"product",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
